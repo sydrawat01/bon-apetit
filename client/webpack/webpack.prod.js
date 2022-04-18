@@ -1,6 +1,6 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BuildAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: 'production',
@@ -42,4 +42,4 @@ module.exports = {
     }),
     new BuildAnalyzerPlugin(),
   ],
-};
+}

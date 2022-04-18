@@ -1,8 +1,8 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const Dotenv = require('dotenv-webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+const Dotenv = require('dotenv-webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -50,4 +50,4 @@ module.exports = {
       ],
     }),
   ],
-};
+}

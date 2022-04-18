@@ -1,4 +1,4 @@
-const ReactRefreshWebapckPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ReactRefreshWebapckPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -39,4 +39,4 @@ module.exports = {
     watchFiles: ['src/**/*.tsx', '/public/**/*'],
   },
   plugins: [new ReactRefreshWebapckPlugin()],
-};
+}
