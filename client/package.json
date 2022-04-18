@@ -17,7 +17,9 @@
   "scripts": {
     "start": "webpack-dashboard -- webpack serve --config webpack.config.js --env env=dev",
     "prebuild": "rimraf build",
-    "build": "webpack --config webpack.config.js --env env=prod"
+    "build": "webpack --config webpack.config.js --env env=prod",
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -36,13 +38,18 @@
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^7.1.0",
     "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "4",
+    "lint-staged": "^12.3.8",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
+    "prettier": "^2.6.2",
     "react-refresh": "^0.12.0",
     "rimraf": "^3.0.2",
     "sass-loader": "^12.6.0",
@@ -54,5 +61,18 @@
     "webpack-dashboard": "^3.3.7",
     "webpack-dev-server": "^4.8.1",
     "webpack-merge": "^5.8.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
