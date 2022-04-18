@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Ramenrogu BackEnd codebase.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev":"nodemon src/index.js",
+    "lint":"eslint src/"
+  },
+  "author": "Jeel Patel",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "express-rate-limit": "^6.3.0",
+    "express-validator": "^6.14.0",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0",
+    "morgan": "^1.10.0",
+    "rate-limit-mongo": "^2.3.2",
+    "router": "^1.3.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15"
+  }
+}
