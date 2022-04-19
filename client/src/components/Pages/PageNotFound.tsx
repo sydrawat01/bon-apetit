@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 const PageNotFound: FC = () => {
   return <div>PageNotFound</div>
