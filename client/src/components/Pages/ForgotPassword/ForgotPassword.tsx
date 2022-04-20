@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 const ForgotPassword: FC = () => {
-  return <div>ForgotPassword</div>
+  return <>ForgotPassword</>
 }
 
 export default ForgotPassword
