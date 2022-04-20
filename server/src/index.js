@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const logs = require('./routes/logEntry.js')
 require('dotenv').config();
 
 const middlewares = require("./middlewares.js");
@@ -18,6 +19,8 @@ app.use(
     origin: process.env.CORS_ORIGIN,
   })
 );
+app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({
@@ -25,6 +28,7 @@ app.get("/", (req, res) => {
   });
 });
 
+app.use('/api/logs',logs);
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
