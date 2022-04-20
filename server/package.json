@@ -5,8 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev":"nodemon src/index.js",
-    "lint":"eslint src/"
+    "dev": "nodemon src/index.js",
+    "lint": "eslint --fix \"./src/**/*.{js,json}\"",
+    "format": "prettier --write \"./src/**/*.{js,json}\""
   },
   "author": "Jeel Patel",
   "license": "ISC",
@@ -28,6 +29,19 @@
   },
   "devDependencies": {
     "eslint": "^8.13.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
     "nodemon": "^2.0.15"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
