@@ -1,31 +1,27 @@
 import { FC } from 'react'
-import { Map } from 'react-map-gl'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 
 import './HomePage.scss'
 
+import { mapContainer, initialViewState } from '../../../models/map'
+
 const HomePage: FC = () => {
-  const mapContainer: {
-    width: number
-    height: number
-  } = {
-    width: 600,
-    height: 400,
+  const mapContainer: mapContainer = {
+    width: '100vw',
+    height: '100vh',
   }
 
-  const initialViewState: {
-    latitude: number
-    longitude: number
-    zoom: number
-  } = {
-    latitude: 37.8,
-    longitude: -122.4,
-    zoom: 14,
+  const initialViewState: initialViewState = {
+    latitude: 42.3398106,
+    longitude: -71.0913604,
+    zoom: 13,
   }
-  const mapUI = 'mapbox://styles/mapbox/streets-v9'
+
+  const mapUI = 'mapbox://styles/sydrawat01/cl28jhv9u004c14nwbveq4wqp'
   return (
     <>
       <div className="map">
-        <Map
+        <ReactMapGL
           initialViewState={initialViewState}
           style={mapContainer}
           mapStyle={mapUI}
