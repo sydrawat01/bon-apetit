@@ -1,9 +1,11 @@
-const { Router } = require("express");
-const router = Router();
-const LogEntry = require("../models/logEntry.js");
-const { getAllVisits, postVisit } = require("../controllers/logEntry");
-router.get("/", getAllVisits);
+const { Router } = require('express')
 
-router.post("/", postVisit);
+const router = Router()
+const { getAllVisits, postVisit } = require('../controllers/logEntry')
 
-module.exports = router;
+router.get('/getVisits', getAllVisits)
+router.post('/postVisit', postVisit)
+// router.delete("/deleteVisits",deleteVisits);
+// router.update("/updateVisits",updateVisits);
+
+module.exports = router
