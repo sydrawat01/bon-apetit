@@ -1,0 +1,43 @@
+@import '../../../styles/base/mixin.scss';
+@import '../../../styles/base/variables.scss';
+
+.error404 {
+  @include pos_abs(relative);
+  top: $big_pixel;
+  background-color: white;
+  text-align: center;
+}
+
+.bowl {
+  width: $big_pixel * 15;
+  height: $small_pixel * 25;
+  @include pos_abs(relative);
+  right: $small_pixel * 3;
+  display: flex;
+}
+
+.text {
+  @include pos_abs(relative);
+  top: $small_pixel;
+  color: gray;
+  font-size: large;
+}
+
+.homeBtn {
+  @include pos_abs(relative);
+  left: $small_pixel * 66;
+  top: $small_pixel * 2;
+  background-color: rgb(250, 178, 190);
+  width: $small_pixel * 12;
+  height: $small_pixel * 5;
+  outline: auto;
+  outline-color: black;
+}
+
+.homeLink {
+  @include pos_abs(relative);
+  top: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}

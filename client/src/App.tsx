@@ -15,7 +15,7 @@ const App: FC = () => {
         <Route path="/" component={HomePage} exact />
         <Route path="/landing" component={Landing} />
         <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route path="/404" component={PageNotFound} />
+        <Route component={PageNotFound} />
       </Switch>
     </BrowserRouter>
   )
