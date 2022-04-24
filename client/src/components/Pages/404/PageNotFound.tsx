@@ -6,22 +6,20 @@ import { Link } from 'react-router-dom'
 const PageNotFound: FC = () => {
   return (
     <div className="error404">
-      <img className="bowl" src={IMG1} alt="errorImg" />
-      <br></br>
+      <div className="img">
+        <img className="bowl" src={IMG1} alt="errorImg" />
+      </div>
       <h1>404</h1>
       <h2>Page Not Found</h2>
-      <br></br>
       <p className="text">
         Uh-oh! Looks like the page you are trying to access, does not
-        <br></br>
-        exist. Please start afresh.
       </p>
-      <br></br>
-      <div className="homeBtn">
+      <p className="textA">exist. Please start afresh.</p>
+      <button className="homeBtn">
         <Link className="homeLink" to="/">
           <h3>Home</h3>
         </Link>
-      </div>
+      </button>
     </div>
   )
 }

@@ -2,42 +2,56 @@
 @import '../../../styles/base/variables.scss';
 
 .error404 {
-  @include pos_abs(relative);
-  top: $big_pixel;
-  background-color: white;
+  background-color: $white;
   text-align: center;
+  font-family: $family;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $gap;
 }
 
 .bowl {
-  width: $big_pixel * 15;
-  height: $small_pixel * 25;
-  @include pos_abs(relative);
-  right: $small_pixel * 3;
-  display: flex;
+  width: $iconWidth;
+  height: $iconHeight;
+  padding-top: $gaps;
+  padding-bottom: $gap;
 }
 
 .text {
-  @include pos_abs(relative);
-  top: $small_pixel;
-  color: gray;
-  font-size: large;
+  font-family: $family;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $gray;
+  font-size: $big;
+  padding-top: $gap;
+}
+
+.textA {
+  font-family: $family;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $gray;
+  font-size: $big;
+  padding-bottom: $gaps;
 }
 
 .homeBtn {
-  @include pos_abs(relative);
-  left: $small_pixel * 66;
-  top: $small_pixel * 2;
-  background-color: rgb(250, 178, 190);
-  width: $small_pixel * 12;
-  height: $small_pixel * 5;
+  background-color: $pink;
+  width: $buttonWidth;
+  height: $buttonHeight;
   outline: auto;
-  outline-color: black;
+  outline-color: $black;
 }
 
 .homeLink {
-  @include pos_abs(relative);
-  top: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $family;
   text-decoration: none;
-  color: black;
+  color: $black;
+  font-size: $para;
 }

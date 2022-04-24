@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
 import Landing from './components/Pages/Landing/Landing'
 import HomePage from './components/Pages/Home/HomePage'
@@ -15,7 +15,8 @@ const App: FC = () => {
         <Route path="/" component={HomePage} exact />
         <Route path="/landing" component={Landing} />
         <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route component={PageNotFound} />
+        <Route path="/404" component={PageNotFound} />
+        <Redirect to="404" />
       </Switch>
     </BrowserRouter>
   )
