@@ -1,0 +1,9 @@
+//added mixin to define absolute where the position needs to be absolute
+@mixin pos_abs($absolute) {
+  position: $absolute;
+}
+
+//added mixin to define relative where the position needs to be relative
+@mixin pos_rel($relative) {
+  position: $relative;
+}

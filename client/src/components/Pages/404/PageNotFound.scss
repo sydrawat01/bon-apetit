@@ -1,0 +1,57 @@
+@import '../../../styles/base/mixin.scss';
+@import '../../../styles/base/variables.scss';
+
+.error404 {
+  background-color: $white;
+  text-align: center;
+  font-family: $family;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $gap;
+}
+
+.bowl {
+  width: $iconWidth;
+  height: $iconHeight;
+  padding-top: $gaps;
+  padding-bottom: $gap;
+}
+
+.text {
+  font-family: $family;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $gray;
+  font-size: $big;
+  padding-top: $gap;
+}
+
+.textA {
+  font-family: $family;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $gray;
+  font-size: $big;
+  padding-bottom: $gaps;
+}
+
+.homeBtn {
+  background-color: $pink;
+  width: $buttonWidth;
+  height: $buttonHeight;
+  outline: auto;
+  outline-color: $black;
+}
+
+.homeLink {
+  font-family: $family;
+  text-decoration: none;
+  color: $black;
+  font-size: $para;
+}
