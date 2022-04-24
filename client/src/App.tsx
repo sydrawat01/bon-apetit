@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Landing from './components/Pages/Landing/Landing'
 import HomePage from './components/Pages/Home/HomePage'
@@ -12,13 +11,12 @@ import './styles/layout/layout.scss'
 const App: FC = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={HomePage} exact />
-        <Route path="/landing" component={Landing} />
-        <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route path="/404" component={PageNotFound} />
-        <Redirect to="404" />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/404" element={<PageNotFound />} />
+      </Routes>
     </BrowserRouter>
   )
 }
