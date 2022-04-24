@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
+
 import Landing from './components/Pages/Landing/Landing'
 import HomePage from './components/Pages/Home/HomePage'
 import ForgotPassword from './components/Pages/ForgotPassword/ForgotPassword'
