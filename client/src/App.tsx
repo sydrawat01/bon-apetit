@@ -11,7 +11,6 @@ import './styles/layout/layout.scss'
 const App: FC = () => {
   return (
     <BrowserRouter>
-      <h1>{process.env.APP_TITLE}</h1>
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/landing" component={Landing} />
