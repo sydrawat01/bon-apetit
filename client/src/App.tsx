@@ -7,6 +7,7 @@ import ForgotPassword from './components/Pages/ForgotPassword/ForgotPassword'
 import PageNotFound from './components/Pages/404/PageNotFound'
 
 import './styles/layout/layout.scss'
+import './styles/main.scss'
 
 const App: FC = () => {
   return (
