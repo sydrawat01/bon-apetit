@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import ReactMapGL, { Marker, Popup } from 'react-map-gl'
-
+import Map from '../MapPage/MapPage'
 import './HomePage.scss'
 
 import { mapContainer, initialViewState } from '../../../models/map'
@@ -20,14 +19,7 @@ const HomePage: FC = () => {
   const mapUI = 'mapbox://styles/sydrawat01/cl28jhv9u004c14nwbveq4wqp'
   return (
     <>
-      <div className="map">
-        <ReactMapGL
-          initialViewState={initialViewState}
-          style={mapContainer}
-          mapStyle={mapUI}
-          mapboxAccessToken={process.env.MAPBOX_ACCESS_TOKEN}
-        />
-      </div>
+      <Map />
     </>
   )
 }
