@@ -46,7 +46,7 @@ const MapWrapper: React.FC<MapWrapperProps> = ({
         {...location}
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/sydrawat01/cl28jhv9u004c14nwbveq4wqp"
+        mapStyle={process.env.MAPBOX_MAP_STYLE}
         mapboxApiAccessToken={process.env.MAPBOX_ACCESS_TOKEN}
         onViewportChange={(nextViewport: any) => setLocation(nextViewport)}
         {...props}

@@ -1,5 +1,5 @@
 import { FormikHelpers } from 'formik'
-import { FormError } from '../../models/Error'
+import { FormError } from '../models/Error'
 import getAxiosError from './getAxiosError'
 
 function handleFormikErrors(error: unknown, action: FormikHelpers<any>) {

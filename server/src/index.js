@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
  * ROUTES
  */
 app.use('/api', logs)
-app.use('/api', authRoutes)
+// app.use('/api', authRoutes)
 
 /**
  * MIDDLEWARES

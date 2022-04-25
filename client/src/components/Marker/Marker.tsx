@@ -12,9 +12,10 @@ const MarkerPin: FC<MarkerPinProps> = ({ markerSize }) => {
       x="0px"
       y="0px"
       viewBox="0 0 503.467 503.467"
+      className="marker-svg"
       style={{
-        width: `${markerSize * 4}px`,
-        height: `${markerSize * 4}px`,
+        width: `${markerSize * 3}px`,
+        height: `${markerSize * 3}px`,
       }}
       xmlSpace="preserve"
     >

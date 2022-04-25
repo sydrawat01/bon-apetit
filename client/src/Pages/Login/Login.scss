@@ -1,0 +1,23 @@
+.topError {
+  background-color: #f5a0a0;
+  color: #f00;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  button {
+    padding: 0;
+    background: none;
+    color: #f00;
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  column-gap: 0.4rem;
+}
