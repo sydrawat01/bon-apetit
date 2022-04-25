@@ -1,0 +1,62 @@
+openapi: "3.0.0"
+info:
+  title: Ramenrogu
+  description: Ramenrogu BackEnd Documentation
+  version: 1.0.1
+servers:
+  - url: http://localhost:1337/api/getVisits
+    description: localhost version of our app
+  - url: http://localhost:1337/api/postVisit
+    description: this is a dummy api url,it doesn't work.
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
+paths:
+  /:
+    get:
+      summary: return title,comments,image,latitude,longitude,rating and visitedDate
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200": # status code
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  comments:
+                    type: string
+                  image:
+                    type: string
+                  latitude:
+                    type: integer
+                  longitude:
+                     type: integer
+                  rating:
+                    type: integer
+                  visitedDate:
+                     type: string
+    post:
+      summary: return username,follows and followers
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200": # status code
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  follows:
+                    type: string

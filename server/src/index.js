@@ -5,15 +5,18 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-// CUSTOM ROUTES
+/**
+ * ROUTES
+ */
 const logs = require('./routes/logEntry')
-// const authRoutes = require('./routes/auth')
-// const userRoutes = require('./routes/user')
+const authRoutes = require('./routes/auth')
 const middlewares = require('./middlewares')
 
 const app = express()
 
-// DB CONNECTION
+/**
+ * DATABASE CONNECTION
+ */
 mongoose
   .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
@@ -23,7 +26,9 @@ mongoose
     console.log('DB IS CONNECTED')
   })
 
-// MIDDDLEWARES
+/**
+ * MIDDLEWARES
+ */
 app.use(morgan('common'))
 app.use(helmet())
 app.use(
@@ -40,17 +45,25 @@ app.get('/', (req, res) => {
   })
 })
 
-// ROUTES
+/**
+ * ROUTES
+ */
 app.use('/api', logs)
 // app.use('/api', authRoutes)
 
-// MIDDLEWARES
+/**
+ * MIDDLEWARES
+ */
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
 
-// PORT
+/**
+ * PORT
+ */
 const port = process.env.PORT || 1337
-// STARTING A SERVER
+/**
+ * STARTING A SERVER
+ */
 app.listen(port, () => {
   console.log('Listening at http://localhost:1337')
 })
