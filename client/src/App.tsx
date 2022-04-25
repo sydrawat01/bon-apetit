@@ -7,6 +7,7 @@ import { API_URL } from './config'
 import Spinner from './components/UI/Spinner'
 
 const Landing = lazy(() => import('./Pages/Landing/Landing'))
+const LogPage = lazy(() => import('./Pages/LogPage/LogPage'))
 const HomePage = lazy(() => import('./Pages/Home/HomePage'))
 const ForgotPassword = lazy(
   () => import('./Pages/ForgotPassword/ForgotPassword')
@@ -30,8 +31,9 @@ const App: FC = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/landing" element={<Landing />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/logs:/id" element={<LogPage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/404" element={<PageNotFound />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
