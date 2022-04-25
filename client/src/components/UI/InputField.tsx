@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import { useField } from 'formik'
 import './InputField.scss'
 
@@ -8,7 +9,7 @@ type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   helperText?: string
 }
 
-const InputField: React.FC<InputFieldProps> = ({
+const InputField: FC<InputFieldProps> = ({
   children,
   label,
   textarea = false,

@@ -3,6 +3,8 @@ import axios from 'axios'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 
+import Layout from './components/Layout/Layout'
+
 import { API_URL } from './config'
 import Spinner from './components/UI/Spinner'
 
@@ -30,16 +32,18 @@ const App: FC = () => {
     <Suspense fallback={<Spinner />}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logs:/id" element={<LogPage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/u/:userId" element={<Profile />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/404" element={<PageNotFound />} />
-            <Route path="*" element={<Navigate to="/404" replace />} />
-          </Routes>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/logs:/id" element={<LogPage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/u/:userId" element={<Profile />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/404" element={<PageNotFound />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
+            </Routes>
+          </Layout>
         </BrowserRouter>
       </QueryClientProvider>
     </Suspense>

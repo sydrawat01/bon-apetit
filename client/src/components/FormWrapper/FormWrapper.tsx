@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
 import './FormWrapper.scss'
@@ -6,7 +6,7 @@ import './FormWrapper.scss'
 type FormWrapperProps = {
   title: string
   subTitle?: string
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 const FormWrapper: FC<FormWrapperProps> = ({ title, subTitle, children }) => {
