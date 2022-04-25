@@ -6,12 +6,12 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { API_URL } from './config'
 import Spinner from './components/UI/Spinner'
 
-const Landing = lazy(() => import('./components/Pages/Landing/Landing'))
-const HomePage = lazy(() => import('./components/Pages/Home/HomePage'))
+const Landing = lazy(() => import('./Pages/Landing/Landing'))
+const HomePage = lazy(() => import('./Pages/Home/HomePage'))
 const ForgotPassword = lazy(
-  () => import('./components/Pages/ForgotPassword/ForgotPassword')
+  () => import('./Pages/ForgotPassword/ForgotPassword')
 )
-const PageNotFound = lazy(() => import('./components/Pages/404/PageNotFound'))
+const PageNotFound = lazy(() => import('./Pages/404/PageNotFound'))
 
 import './styles/layout/layout.scss'
 import './styles/main.scss'
