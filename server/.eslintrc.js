@@ -1,4 +1,4 @@
-const { off } = require("process");
+const { off } = require('process')
 
 module.exports = {
   env: {
@@ -6,14 +6,12 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  // extends: ['airbnb-base'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
   rules: {
     'no-unused-vars': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
   },
-};
+}

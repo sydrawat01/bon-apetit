@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { FC, Fragment, useEffect, useRef, useState } from 'react'
 import { MapEvent, Marker, Popup } from 'react-map-gl'
 import classNames from 'classnames'
 import useMedia from 'use-media'
 import useFetchMyLogs from '../../hooks/queries/useFetchMyLogs'
-import Spinner from '../../UI/Spinner'
-import MarkerPin from '../../Marker/Marker'
-import MapWrapper from '../../MapWrapper/MapWrapper'
-import AddLogEntry from '../../AddLogEntry/AddLogEntry'
+import Spinner from '../../components/UI/Spinner'
+import MarkerPin from '../../components/Marker/Marker'
+import MapWrapper from '../../components/MapWrapper/MapWrapper'
+import AddLogEntry from '../../components/AddLogEntry/AddLogEntry'
 import './MapPage.scss'
 import { freezeMapSettings } from '../../utils/freezeMapSettings'
 
@@ -19,7 +19,8 @@ const scrollToBottom = () => {
   window.scrollTo(0, document.body.scrollHeight)
 }
 
-const MapPage = () => {
+const MapPage: FC = () => {
+  const { data: logEntries, isLoading } = useFetchMyLogs()
   const [showPopup, setShowPopup] = useState<Record<string, boolean>>({})
   const [newLocation, setNewLocation] = useState<Location | null>(null)
   const [confirmLoc, setConfirmLoc] = useState<Location | null>(null)
@@ -35,6 +36,31 @@ const MapPage = () => {
   })
 
   const isTab = useMedia({ maxWidth: '643px' })
+  const addLogWrapperRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // when location is confirmed to add log, adjust map view to take only 50vw in desktop
+    if (confirmLoc) {
+      if (!isTab) {
+        setViewport({ ...viewport, width: '50vw' })
+      } else {
+        console.log(addLogWrapperRef.current?.clientHeight)
+        setViewport({
+          ...viewport,
+          width: '100vw',
+          // height: `calc(100vh - 60px + ${addLogWrapperRef.current?.clientHeight}px)`,
+        })
+      }
+    } else {
+      setViewport({
+        ...viewport,
+        width: '100vw',
+        // height: 'calc(100vh - 60px)',
+        height: '100vh',
+      })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [confirmLoc, isTab])
 
   const addNewLocation = (event: MapEvent) => {
     setConfirmLoc(null)
@@ -47,9 +73,9 @@ const MapPage = () => {
     setLocation({ ...location, latitude, longitude })
   }
 
-  // if (isLoading) {
-  //   return <Spinner />
-  // }
+  if (isLoading) {
+    return <Spinner />
+  }
   return (
     <>
       <MapWrapper
@@ -64,6 +90,38 @@ const MapPage = () => {
         // Freeze map after confirming the location
         {...(confirmLoc && freezeMapSettings)}
       >
+        {logEntries?.map((entry) => (
+          <Fragment key={entry._id}>
+            <Marker latitude={entry.latitude} longitude={entry.longitude}>
+              <div
+                onClick={() => {
+                  setShowPopup({ [entry._id]: true })
+                }}
+              >
+                <MarkerPin markerSize={location.zoom} />
+              </div>
+            </Marker>
+            {showPopup[entry._id] && (
+              <Popup
+                latitude={entry.latitude}
+                longitude={entry.longitude}
+                closeButton={true}
+                closeOnClick={false}
+                onClose={() => setShowPopup({})}
+                dynamicPosition={true}
+                anchor="top"
+              >
+                <div className="popup">
+                  <h3>{entry.title}</h3>
+                  <p>{entry.comments}</p>
+                  <small>
+                    Visited on: {new Date(entry.visitDate).toLocaleDateString()}
+                  </small>
+                </div>
+              </Popup>
+            )}
+          </Fragment>
+        ))}
         {newLocation && (
           <>
             <Marker
