@@ -1,10 +1,11 @@
+import { FC } from 'react'
 import { Form, Formik } from 'formik'
 import { useQueryClient } from 'react-query'
 import { useNavigate } from 'react-router-dom'
-import useAddLogMutation from '../hooks/mutations/useAddLogMutation'
+import useAddLogMutation from '../../hooks/mutations/useAddLogMutation'
 import InputField from '../UI/InputField'
 import './AddLogEntry.scss'
-import handleFormikErrors from '../utils/handleFormikError'
+import handleFormikErrors from '../../utils/handleFormikError'
 
 type AddLogEntryProps = {
   location: {
@@ -13,7 +14,7 @@ type AddLogEntryProps = {
   }
 }
 
-const AddLogEntry: React.FC<AddLogEntryProps> = ({
+const AddLogEntry: FC<AddLogEntryProps> = ({
   location: { latitude, longitude },
 }) => {
   const queryClient = useQueryClient()
