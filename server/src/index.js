@@ -7,8 +7,8 @@ require('dotenv').config()
 
 // CUSTOM ROUTES
 const logs = require('./routes/logEntry')
-const authRoutes = require('./routes/auth')
-const userRoutes = require('./routes/user')
+// const authRoutes = require('./routes/auth')
+// const userRoutes = require('./routes/user')
 const middlewares = require('./middlewares')
 
 const app = express()
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 
 // ROUTES
 app.use('/api', logs)
-app.use('/api', authRoutes)
+// app.use('/api', authRoutes)
 
 // MIDDLEWARES
 app.use(middlewares.notFound)
