@@ -35,7 +35,7 @@ module.exports = {
     hot: true,
     open: true,
     historyApiFallback: true,
-    host: '0.0.0.0',
+    host: 'localhost',
     watchFiles: ['src/**/*.tsx', '/public/**/*'],
   },
   plugins: [new ReactRefreshWebapckPlugin()],

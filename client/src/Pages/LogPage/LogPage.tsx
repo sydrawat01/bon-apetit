@@ -24,7 +24,7 @@ const Landing: FC = () => {
   const [location, setLocation] = useState({
     latitude: data?.latitude || 0,
     longitude: data?.longitude || 0,
-    zoom: 8,
+    zoom: 13,
   })
 
   useEffect(() => {

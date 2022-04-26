@@ -37,14 +37,16 @@ const Register: FC = () => {
             <InputField label="Email" name="email" />
             <InputField label="Username" name="username" />
             <InputField type="password" label="Password" name="password" />
-            <button
-              type="submit"
-              disabled={
-                isSubmitting || !fullName || !username || !email || !password
-              }
-            >
-              Sign Up
-            </button>
+            <div className="btn-group">
+              <button
+                type="submit"
+                disabled={
+                  isSubmitting || !fullName || !username || !email || !password
+                }
+              >
+                Sign Up
+              </button>
+            </div>
           </Form>
         )}
       </Formik>

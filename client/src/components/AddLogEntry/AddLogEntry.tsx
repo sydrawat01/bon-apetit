@@ -37,7 +37,6 @@ const AddLogEntry: FC<AddLogEntryProps> = ({
             {
               onSuccess: async (data) => {
                 if (!!data.errors?.length) {
-                  console.log('made it here')
                   data.errors.forEach(({ path, message }) =>
                     action.setFieldError(path, message)
                   )

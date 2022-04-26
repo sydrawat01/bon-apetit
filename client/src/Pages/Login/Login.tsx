@@ -63,15 +63,6 @@ const Login: FC = () => {
                 >
                   Login
                 </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setFieldValue('username', 'bob')
-                    setFieldValue('password', 'bob123')
-                  }}
-                >
-                  Load test credentials
-                </button>
               </div>
             </Form>
           )

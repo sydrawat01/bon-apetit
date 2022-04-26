@@ -11,7 +11,7 @@ const Banner: FC = () => {
           bon-<span className="bonappetit">app-e</span>tit.
         </span>{' '}
       </h1>
-      <p>Share your journey with us !</p>
+      <p>Your favourite places to eat on a map!</p>
     </div>
   )
 }

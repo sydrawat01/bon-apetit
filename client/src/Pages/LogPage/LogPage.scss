@@ -41,7 +41,9 @@
   display: flex;
   gap: 0.8rem;
   margin-top: 0.9rem;
+  justify-content: flex-end !important;
   & .trash_btn {
     background-color: rgb(158, 2, 2);
+    width: 100%;
   }
 }

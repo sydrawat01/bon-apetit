@@ -16,8 +16,8 @@ const Landing: FC = () => {
   }
 
   return (
-    <div className="container public-logs-container back">
-      <h1>Browse Logs</h1>clas
+    <div className="container public-logs-container">
+      <h1>Browse Logs</h1>
       <section className="logs-list">
         {data && data.length > 0 ? (
           data.map((entry) => (
