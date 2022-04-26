@@ -16,7 +16,7 @@ const Header: FC = () => {
         <Link className="logo" to="/">
           <h1>
             <i className="fas fa-map-marked-alt"></i>
-            trave<span style={{ color: 'yellow' }}>l-l</span>ogs.
+            bon-<span style={{ color: '#69060b' }}>appe</span>tit.
           </h1>
         </Link>
         <nav>
@@ -53,7 +53,8 @@ const Header: FC = () => {
                     queryClient.invalidateQueries('me')
                   }}
                 >
-                  <i className="fas fa-sign-out-alt"></i>
+                  {/* fas fa-sign-out-alt */}
+                  <i className="white"></i>
                   Logout
                 </button>
               </li>

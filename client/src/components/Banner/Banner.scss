@@ -1,22 +1,23 @@
 .banner {
   position: relative;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 5rem 1rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
+  background-image: url('../../assets/images/fast-food-banner\ \(1\).jpg');
+  background-size: cover;
   margin-top: -60px;
   padding-top: calc(5rem + 60px);
   &::before {
-    position: absolute;
+    position: relative;
     content: '';
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
   }
   h1 {
