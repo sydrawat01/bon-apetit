@@ -4,7 +4,7 @@
   "description": "Ramenrogu front-end codebase.",
   "main": "./src/index.tsx",
   "repository": "https://github.com/neu-mis-info6150-spring-2022/final-project-bon-appetit.git",
-  "author": "Siddharth Rawat <rawat.sid@northeastern.edu>",
+  "author": "Siddharth Rawat <rawat.sid@northeastern.edu>, Jeel Patel <patel.jeel@northeastern.edu>",
   "license": "MIT",
   "private": true,
   "dependencies": {
