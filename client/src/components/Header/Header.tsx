@@ -16,7 +16,7 @@ const Header: FC = () => {
         <Link className="logo" to="/">
           <h1>
             <i className="fas fa-map-marked-alt"></i>
-            bon-<span style={{ color: '#69060b' }}>appe</span>tit.
+            bon-<span className="bonappetit">app-e</span>tit.
           </h1>
         </Link>
         <nav>

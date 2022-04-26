@@ -8,7 +8,7 @@ const Banner: FC = () => {
       <h1>
         Welcome to{' '}
         <span className="logo-text">
-          bon<span style={{ color: '#69060b' }}>app-e</span>tit.
+          bon-<span className="bonappetit">app-e</span>tit.
         </span>{' '}
       </h1>
       <p>Share your journey with us !</p>

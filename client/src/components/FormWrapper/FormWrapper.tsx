@@ -15,7 +15,7 @@ const FormWrapper: FC<FormWrapperProps> = ({ title, subTitle, children }) => {
       <Link className="logo" to="/">
         <h1>
           <i className="fas fa-map-marked-alt"></i>
-          bon-<span style={{ color: 'green' }}>appe</span>tit.
+          bon-<span className="bonappetit">app-e</span>tit.
         </h1>
       </Link>
       <h2>{title}</h2>
