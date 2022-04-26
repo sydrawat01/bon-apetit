@@ -8,7 +8,7 @@ const Banner: FC = () => {
       <h1>
         Welcome to{' '}
         <span className="logo-text">
-          trave<span style={{ color: 'yellow' }}>l-l</span>ogs.
+          bon-<span className="bonappetit">app-e</span>tit.
         </span>{' '}
       </h1>
       <p>Share your journey with us !</p>

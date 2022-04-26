@@ -16,8 +16,8 @@ const Landing: FC = () => {
   }
 
   return (
-    <div className="container public-logs-container">
-      <h1 style={{ textTransform: 'uppercase' }}>Browse logs</h1>
+    <div className="container public-logs-container back">
+      <h1>Browse Logs</h1>clas
       <section className="logs-list">
         {data && data.length > 0 ? (
           data.map((entry) => (

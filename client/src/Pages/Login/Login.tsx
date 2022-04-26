@@ -78,7 +78,7 @@ const Login: FC = () => {
         }}
       </Formik>
       <small>
-        Don`&apos;`t have an account? <Link to="/register">Sign up</Link>
+        Do not have an account? <Link to="/register">Sign up</Link>
       </small>
     </FormWrapper>
   )

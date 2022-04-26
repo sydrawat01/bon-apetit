@@ -9,9 +9,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'DM Mono';
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
@@ -51,8 +49,8 @@ textarea:focus {
 
 button {
   display: inline-block;
-  color: #fff;
-  background-color: #333;
+  background-color: #fff;
+  color: #ff0000;
   border: none;
   padding: 0.5rem 1.3rem;
   border-radius: 4px;
