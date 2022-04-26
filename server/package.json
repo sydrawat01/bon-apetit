@@ -2,17 +2,19 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Ramenrogu BackEnd codebase.",
-  "main": "src/server.js",
+  "main": "dist/index.ts",
   "scripts": {
-    "start": "node src/index.js",
-    "dev" : "concurrently \"npx tsc -w\" \"yarn server\" -n tsc,server -c green,blue",
-    "server": "nodemon src/index.js --ignore client",
+    "start": "node dist/index.ts",
+    "dev": "concurrently \"npx tsc -w\" \"yarn server\" -n tsc,server -c green,blue",
+    "server": "nodemon dist /index.ts --ignore client",
     "lint": "eslint --fix \"./src/**/*.{js,json}\"",
     "format": "prettier --write \"./src/**/*.{js,json}\""
   },
   "author": "Jeel Patel, Siddharth Rawat",
   "license": "ISC",
   "dependencies": {
+    "argon2": "^0.28.5",
+    "colors": "^1.4.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -22,7 +24,7 @@
     "express-validator": "^6.14.0",
     "helmet": "^5.0.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.0",
+    "mongoose": "^5.13.14",
     "morgan": "^1.10.0",
     "rate-limit-mongo": "^2.3.2",
     "router": "^1.3.6",
@@ -44,7 +46,7 @@
     "typescript": "^4.6.3"
   },
   "lint-staged": {
-    "src/**/*.{js,json}": [
+    "src/**/*.{js,ts,json}": [
       "eslint --fix",
       "prettier --write"
     ]
