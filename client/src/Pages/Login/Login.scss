@@ -19,5 +19,9 @@
 
 .btn-group {
   display: flex;
+  justify-content: center;
   column-gap: 0.4rem;
+  button {
+    width: 100%;
+  }
 }
