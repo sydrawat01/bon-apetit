@@ -1,4 +1,5 @@
 //Size
+$height: 100%;
 $big_pixel: 100px;
 $small_pixel: 10px;
 $buttonWidth: $small_pixel * 12;
@@ -7,15 +8,19 @@ $iconWidth: $big_pixel * 15;
 $iconHeight: $small_pixel * 25;
 $gaps: $small_pixel * 4;
 $gap: $small_pixel * 1;
+$portion: 1fr;
 
 //Font
 $family: Arial, Helvetica, sans-serif;
 $default: 1rem;
+$padding: $default + 1rem;
 $heading: $default * 3;
 $caption: $default + 0.3rem;
 $big: $default + 0.2rem;
 $para: $default + 0.1rem;
 $small: $default - 0.2rem;
+$mini: $default - 0.5rem;
+$size: $default - 0.6rem;
 $bold: 700;
 $regular: 400;
 $thin: 100;
@@ -26,3 +31,8 @@ $pink: #fab2be;
 $gray: #808080;
 $black: #000000;
 $shadow: rgba(0, 0, 0, 0.5);
+$mustard: #efbc3c;
+$customColor: #111;
+$grayColor: #555;
+$blue: blue;
+$boxShadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);

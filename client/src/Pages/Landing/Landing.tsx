@@ -17,7 +17,10 @@ const Landing: FC = () => {
 
   return (
     <div className="container public-logs-container">
-      <h1>Browse Logs</h1>
+      <h1 className="head-title">Browse Logs</h1>
+      <p className="brief">
+        Explore curated lists of reviews of top places in Boston
+      </p>
       <section className="logs-list">
         {data && data.length > 0 ? (
           data.map((entry) => (

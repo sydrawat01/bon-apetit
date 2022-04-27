@@ -1,26 +1,30 @@
+@import '../../styles/main.scss';
+
 .container {
   h1 {
-    text-align: center;
+    display: flex;
+    font-size: $bold;
   }
 }
 
 .logs-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: $default;
 }
 
 .log-article {
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
-  height: 100%;
+  padding: $padding;
+  border-radius: $mini;
+  box-shadow: $boxShadow;
+  height: $height;
+  background-color: $mustard;
   a {
-    color: #111;
+    color: $customColor;
     width: max-content;
     h2 {
       margin-top: 0;
-      margin-bottom: 1rem;
+      margin-bottom: $default;
     }
   }
   blockquote {
@@ -31,24 +35,29 @@
     display: flex;
     align-items: center;
     i {
-      color: #555;
-      height: 1rem;
-      width: 1rem;
-      margin-right: 0.4rem;
+      color: $grayColor;
+      height: $default;
+      width: $default;
+      margin-right: $size;
     }
   }
 }
 
 .no-log-wrapper {
-  height: 100%;
+  height: $height;
   a {
-    color: blue;
+    color: $blue;
     text-decoration: none;
   }
 }
 
+.brief {
+  display: flex;
+  color: $gray;
+}
+
 @media screen and (max-width: 768px) {
   .public-logs-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: $portion;
   }
 }
