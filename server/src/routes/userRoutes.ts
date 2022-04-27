@@ -8,7 +8,9 @@ import {
 import isUser from '../middlewares/isUser'
 
 const router = Router()
-
+/**
+ * USERS GET AND POST ROUTES
+ */
 router.get('/', getAllUsers)
 router.get('/me', isUser, getCurrentUser)
 router.post('/register', registerUser)

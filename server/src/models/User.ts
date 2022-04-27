@@ -10,7 +10,9 @@ export interface UserInterface extends Document {
   updatedAt: Date
   verifyPassword(password: string): Promise<boolean>
 }
-
+/**
+ * USERS SCHEMA
+ */
 const UserSchema = new mongoose.Schema<UserInterface>(
   {
     fullName: {
