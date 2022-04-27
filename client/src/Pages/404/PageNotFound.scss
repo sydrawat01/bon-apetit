@@ -1,7 +1,7 @@
 @import '../../styles/main.scss';
 
 .error404 {
-  background-color: $white;
+  background-image: linear-gradient($gradientDark, $white);
   text-align: center;
   font-family: $family;
 }
@@ -10,14 +10,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: $gap;
+  padding-bottom: 10px;
 }
 
 .bowl {
-  width: $iconWidth;
-  height: $iconHeight;
-  padding-top: $gaps;
-  padding-bottom: $gap;
+  width: 1500px;
+  height: 250px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .text {
@@ -27,7 +27,7 @@
   text-align: center;
   color: $gray;
   font-size: $big;
-  padding-top: $gap;
+  padding-top: 10px;
 }
 
 .textA {
@@ -37,13 +37,13 @@
   text-align: center;
   color: $gray;
   font-size: $big;
-  padding-bottom: $gaps;
+  padding-bottom: 40px;
 }
 
 .homeBtn {
   background-color: $pink;
-  width: $buttonWidth;
-  height: $buttonHeight;
+  width: 120px;
+  height: 50px;
   outline: auto;
   outline-color: $black;
 }
@@ -53,4 +53,7 @@
   text-decoration: none;
   color: $black;
   font-size: $para;
+  h3 {
+    margin: 0;
+  }
 }

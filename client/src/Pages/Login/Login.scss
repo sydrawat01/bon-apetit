@@ -2,8 +2,8 @@
 
 // ERROR STYLES
 .topError {
-  background-color: $defaultColor;
-  color: $red;
+  background-color: $warn;
+  color: $error;
   font-weight: bold;
   padding: 1rem;
   display: flex;
@@ -13,7 +13,7 @@
   button {
     padding: 0;
     background: none;
-    color: $red;
+    color: $error;
     &:active {
       box-shadow: none;
     }

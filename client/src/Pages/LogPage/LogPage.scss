@@ -4,8 +4,8 @@
 .log-page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  background-image: linear-gradient($custColor, $white);
+  gap: 3rem;
+  background-image: linear-gradient($gradientDark, $white);
 }
 // DETAIL SECTION STYLES
 .detail-section {
@@ -15,7 +15,7 @@
   margin-bottom: 2rem;
   min-height: 10rem;
   height: 100%;
-  background-color: $whitesmoke;
+  background-color: $card;
 }
 
 .flex-ic {
@@ -29,8 +29,8 @@
 
 // LOG USER STYLES
 .log-user {
-  font-weight: $reg;
-  color: $cusCol;
+  font-weight: $regular;
+  color: #333;
 }
 // MAP  SECTION STYLES
 .map-section {
@@ -50,7 +50,7 @@
   margin-top: 0.9rem;
   justify-content: flex-end !important;
   & .trash_btn {
-    background-color: $custCol2;
+    background-color: $delete;
     width: 100%;
   }
 }

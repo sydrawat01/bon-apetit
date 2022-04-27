@@ -1,7 +1,7 @@
 import { FC, Suspense, lazy } from 'react'
 import axios from 'axios'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 
 import Layout from './components/Layout/Layout'
 
@@ -15,6 +15,7 @@ const Login = lazy(() => import('./Pages/Login/Login'))
 const LogPage = lazy(() => import('./Pages/LogPage/LogPage'))
 const Profile = lazy(() => import('./Pages/Profile/Profile'))
 const Register = lazy(() => import('./Pages/Register/Register'))
+const PageNotFound = lazy(() => import('./Pages/404/PageNotFound'))
 
 import './styles/layout/layout.scss'
 import './styles/main.scss'
@@ -47,6 +48,8 @@ const App: FC = () => {
               />
               <Route path="/u/:userId" element={<Profile />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/404" element={<PageNotFound />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>
           </Layout>
         </BrowserRouter>
