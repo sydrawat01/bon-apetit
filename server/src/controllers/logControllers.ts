@@ -2,6 +2,9 @@ import { NextFunction, Request, Response } from 'express'
 import LogEntry from '../models/LogEntry'
 import returnFormErrors from '../utils/resMongoErrors'
 
+/**
+ * LOGS FETCH FOR USER 
+ */
 export const fetchMyLogs = async (
   _req: Request,
   res: Response,
@@ -15,7 +18,9 @@ export const fetchMyLogs = async (
     return next(error)
   }
 }
-
+/**
+ * FETCHES ALL LOGS 
+ */
 export const fetchAllLogs = async (
   _req: Request,
   res: Response,
@@ -30,7 +35,9 @@ export const fetchAllLogs = async (
     return next(error)
   }
 }
-
+/**
+ * FETCHES PARTICULAR LOG
+ */
 export const fetchOneLog = async (
   req: Request,
   res: Response,
@@ -44,7 +51,9 @@ export const fetchOneLog = async (
     return next(error)
   }
 }
-
+/**
+ * CONTROLLER TO LOG
+ */
 export const addLog = async (
   req: Request,
   res: Response,
@@ -59,7 +68,9 @@ export const addLog = async (
     return returnFormErrors(res, next, error)
   }
 }
-
+/**
+ * DELETE LOG CONTROLLER
+ */
 export const deleteLog = async (
   req: Request,
   res: Response,

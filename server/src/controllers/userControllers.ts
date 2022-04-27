@@ -3,6 +3,9 @@ import User from '../models/User'
 import returnFormErrors from '../utils/resMongoErrors'
 import { setToken } from '../utils/tokenHandler'
 
+/**
+ * GET ALL USERS CONTROLLER
+ */
 export const getAllUsers = async (
   _req: Request,
   res: Response,
@@ -16,7 +19,9 @@ export const getAllUsers = async (
     return next(err)
   }
 }
-
+/**
+ * GET CURRENT USER CONTROLLER
+ */
 export const getCurrentUser = async (
   _req: Request,
   res: Response,
@@ -31,7 +36,9 @@ export const getCurrentUser = async (
     return next(err)
   }
 }
-
+/**
+ * LOGIN USER CONTROLLER
+ */
 export const loginUser = async (
   req: Request,
   res: Response,
@@ -54,7 +61,9 @@ export const loginUser = async (
     return next(error)
   }
 }
-
+/**
+ * REGISTER USER CONTROLLER
+ */
 export const registerUser = async (
   req: Request,
   res: Response,

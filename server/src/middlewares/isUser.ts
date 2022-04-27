@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
 import { verifyToken } from '../utils/tokenHandler'
-
+/**
+ * AUTHORIZE USER MIDDLEWARES
+ */
 const isUser = (req: Request, res: Response, next: NextFunction) => {
   try {
     const authError = new Error('Not Authenticated')

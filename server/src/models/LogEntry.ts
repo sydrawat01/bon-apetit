@@ -18,7 +18,9 @@ const requiredNumber = {
   type: Number,
   required: true,
 }
-
+/**
+ * LOG-ENTRY SCHEMA
+ */
 const logEntrySchema = new mongoose.Schema<LogEntry>(
   {
     title: {

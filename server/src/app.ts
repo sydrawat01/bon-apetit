@@ -1,16 +1,22 @@
 import express from 'express'
 
-// Header Middleware
+/**
+ * HEADER MIDDLEWARES
+ */
 import morgan from 'morgan' // logger the requests and response
 import helmet from 'helmet' // protects some headers from exposure
 import cors from 'cors' // access to our server from external server - Cross Origin Resource Sharing Header
 
-// Middlewares
-// import trim from './middlewares/trim';
+/**
+ * MIDDLEWARES
+ */
+
 import errorHandler from './middlewares/errorHandler'
 import notFound from './middlewares/notFound'
 
-// Routes
+/**
+ * ROUTES
+ */
 import usersRoutes from './routes/userRoutes'
 import logRoutes from './routes/logRoutes'
 import { PROD } from './constants'
@@ -18,6 +24,17 @@ import path from 'path'
 
 const app = express()
 
+/**
+ * SWAGGER DOCUMENTATION(API DOCUMENTATION)
+ */
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./swagger.yaml');
+
+/**
+ * MIDDLEWARES
+ */
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(morgan('common'))
 app.use(helmet({ contentSecurityPolicy: false }))
 app.use(express.json())
@@ -29,8 +46,10 @@ if (!PROD)
       origin: 'http://localhost:3000',
     })
   )
-// app.use(trim);
 
+/**
+ * CUSTOM ROUTES
+ */
 app.use('/api/users', usersRoutes)
 app.use('/api/logs', logRoutes)
 
@@ -47,7 +66,9 @@ if (PROD) {
     res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
   })
 }
-
+/**
+ * MIDDLEWARES
+ */
 app.use(notFound)
 app.use(errorHandler)
 

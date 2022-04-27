@@ -1,6 +1,8 @@
 import { Response, NextFunction, Request } from 'express'
 import { PROD } from '../constants'
-
+/**
+ * ERROR HANDLER MIDDLEWARES
+ */
 const errorHandler = (
   error: Error,
   _req: Request,

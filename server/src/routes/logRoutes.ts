@@ -9,7 +9,9 @@ import {
 import isAuth from '../middlewares/isAuth'
 
 const router = Router()
-
+/**
+ * ROUTES FOR LOGS
+ */
 router.get('/me', isAuth, fetchMyLogs)
 router.post('/', isAuth, addLog)
 
