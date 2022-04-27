@@ -14,6 +14,9 @@ import { freezeMapSettings } from '../../utils/freezeMapSettings'
 
 import './LogPage.scss'
 
+/**
+ * LANDING
+ */
 const Landing: FC = () => {
   const { id } = useParams()
   const { data, isLoading } = useFetchOneLog(id)

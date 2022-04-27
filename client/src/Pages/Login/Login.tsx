@@ -13,6 +13,9 @@ import { useQueryClient, useMutation } from 'react-query'
 
 import './Login.scss'
 
+/**
+ * LOGIN FORM
+ */
 const Login: FC = () => {
   const queryClient = useQueryClient()
   const { mutateAsync } = useMutation(loginUser)

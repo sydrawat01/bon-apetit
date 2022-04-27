@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import './Profile.scss'
 
+// PROFILE
 const Profile: FC = () => {
   const params: any = useParams()
   const userId: string = params.userId

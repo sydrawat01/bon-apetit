@@ -13,7 +13,9 @@ type AddLogEntryProps = {
     longitude: number
   }
 }
-
+/**
+ * ADD LOG ENTRY FORM
+ */
 const AddLogEntry: FC<AddLogEntryProps> = ({
   location: { latitude, longitude },
 }) => {

@@ -7,7 +7,9 @@ import useMeQuery from '../../hooks/queries/useMeQuery'
 import logo from '../../assets/images/ramen.png'
 
 import './Header.scss'
-
+/**
+ * HEADER(NAVBAR)
+ */
 const Header: FC = () => {
   const queryClient = useQueryClient()
   const { data } = useMeQuery()

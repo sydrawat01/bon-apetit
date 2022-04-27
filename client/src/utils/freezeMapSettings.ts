@@ -1,3 +1,4 @@
+// FREEZE MAP
 export const freezeMapSettings = {
   dragPan: false,
   dragRotate: false,

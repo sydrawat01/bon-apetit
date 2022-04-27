@@ -1,3 +1,4 @@
+// CONTAINER STYLES
 .container {
   .logo {
     padding: 10px 0 0 0;
@@ -18,13 +19,13 @@
   color: black;
   background-image: linear-gradient(rgb(251, 239, 201), white);
 }
-
+//LOG TILES STYLES
 .logs-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
-
+//LOG ARTICLES STYLES
 .log-article {
   padding: 2rem;
   border-radius: 0.5rem;
@@ -66,7 +67,7 @@
     text-decoration: none;
   }
 }
-
+// MEDIA QUERIES
 @media screen and (max-width: 768px) {
   .public-logs-container {
     grid-template-columns: 1fr;

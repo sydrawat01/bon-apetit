@@ -1,17 +1,23 @@
 import ReactMapGL from 'react-map-gl'
 import { InteractiveMapProps } from 'react-map-gl/src/components/interactive-map'
-
+/**
+ * TYPE DEFINITION FOR LOCATION STATE
+ */
 type LocationState = {
   latitude: number
   longitude: number
   zoom: number
 }
-
+/**
+ * TYPE DEFINITIONS FOR DIMENSIONS OF MAP
+ */
 type Dimension = {
   width: string
   height: string
 }
-
+/**
+ * TYPE DEFINITIONS FOR THE MAP WRAPPER PROPS
+ */
 type MapWrapperProps = InteractiveMapProps & {
   locationState: {
     location: LocationState
@@ -21,7 +27,9 @@ type MapWrapperProps = InteractiveMapProps & {
     viewport: Dimension
   }
 }
-
+/**
+ * MAP WRAPPER AND MAP-BOX API INTEGRATION
+ */
 const MapWrapper: React.FC<MapWrapperProps> = ({
   locationState,
   viewportState,

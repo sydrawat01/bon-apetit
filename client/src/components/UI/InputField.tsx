@@ -1,14 +1,18 @@
 import { FC } from 'react'
 import { useField } from 'formik'
 import './InputField.scss'
-
+/**
+ * DEFINITION FOR INPUT FIELDS
+ */
 type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string
   name: string
   textarea?: boolean
   helperText?: string
 }
-
+/**
+ * INPUT FIELD
+ */
 const InputField: FC<InputFieldProps> = ({
   children,
   label,
