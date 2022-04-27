@@ -2,6 +2,8 @@
 $height: 100%;
 $big_pixel: 100px;
 $small_pixel: 10px;
+$basicHt: $small_pixel * 3;
+$basicWdt: 35px;
 $buttonWidth: $small_pixel * 12;
 $buttonHeight: $small_pixel * 5;
 $iconWidth: $big_pixel * 15;
@@ -9,11 +11,17 @@ $iconHeight: $small_pixel * 25;
 $gaps: $small_pixel * 4;
 $gap: $small_pixel * 1;
 $portion: 1fr;
+$spaces: 10px 0 0 0;
+$basic: 0 0 15px 0;
+$bigpixels: $big_pixel * 3;
+$largeSize: 768px;
 
 //Font
 $family: 'DM Mono', Helvetica, sans-serif;
 $default: 1rem;
 $padding: $default + 1rem;
+$bigSize: $default + 0.6rem;
+$bigger: $default + 3rem;
 $heading: $default * 3;
 $caption: $default + 0.3rem;
 $big: $default + 0.2rem;
@@ -33,6 +41,9 @@ $black: #000000;
 $shadow: rgba(0, 0, 0, 0.5);
 $mustard: #efbc3c;
 $customColor: #111;
-$grayColor: #555;
+$cusColor: #555;
 $blue: blue;
 $boxShadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+$logo: #b09954;
+$whitesmoke: whitesmoke;
+$custColor: rgb(251, 239, 201);

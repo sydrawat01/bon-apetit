@@ -1,82 +1,84 @@
+@import '../../styles/main.scss';
+
 // CONTAINER STYLES
 .container {
   .logo {
-    padding: 10px 0 0 0;
+    padding: $spaces;
   }
   h1 {
     text-align: center;
-    font-size: 4rem;
-    margin: 0 0 15px 0;
+    font-size: $bigger;
+    margin: $basic;
     display: flex;
     justify-content: center;
     align-items: center;
     i {
-      color: #b09954;
+      color: $logo;
     }
   }
 }
 .public-logs-container {
-  color: black;
-  background-image: linear-gradient(rgb(251, 239, 201), white);
+  color: $black;
+  background-image: linear-gradient($custColor, $white);
 }
 //LOG TILES STYLES
 .logs-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax($bigpixels, $portion));
+  gap: $default;
 }
 //LOG ARTICLES STYLES
 .log-article {
-  padding: 2rem;
-  border-radius: 0.5rem;
-  background-color: whitesmoke;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
-  height: 100%;
+  padding: $padding;
+  border-radius: $mini;
+  background-color: $whitesmoke;
+  box-shadow: $boxShadow;
+  height: $height;
   a {
-    color: #111;
+    color: $customColor;
     width: max-content;
     h2 {
       margin-top: 0;
-      margin-bottom: 1rem;
+      margin-bottom: $default;
     }
   }
   blockquote {
     margin-left: 0;
     opacity: 0.8;
-    font-size: 1.2rem;
+    font-size: $big;
   }
   .flex-2 {
     display: flex;
     align-items: center;
     span {
-      font-size: 1.3rem;
+      font-size: $caption;
     }
     i {
-      color: #555;
-      height: 1rem;
-      width: 1rem;
-      margin-right: 0.4rem;
+      color: $cusColor;
+      height: $default;
+      width: $default;
+      margin-right: $size;
     }
   }
 }
 
 .no-log-wrapper {
-  height: 100%;
+  height: $height;
   a {
-    color: blue;
+    color: $blue;
     text-decoration: none;
   }
 }
 // MEDIA QUERIES
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $largeSize) {
   .public-logs-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: $portion;
   }
   .container h1 {
-    font-size: 1.6rem;
+    font-size: $bigSize;
     img {
-      width: 35px;
-      height: 30px;
+      width: $basicWdt;
+      height: $basicHt;
     }
   }
 }
