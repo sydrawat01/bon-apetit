@@ -4,6 +4,8 @@ import { useQueryClient } from 'react-query'
 import { Link } from 'react-router-dom'
 import useMeQuery from '../../hooks/queries/useMeQuery'
 
+import logo from '../../assets/images/ramen.png'
+
 import './Header.scss'
 
 const Header: FC = () => {
@@ -15,7 +17,7 @@ const Header: FC = () => {
       <div className="container">
         <Link className="logo" to="/">
           <h1>
-            <i className="fas fa-map-marked-alt"></i>
+            <img src={logo} alt="ramen.png" />
             Bon Appétit
           </h1>
         </Link>
