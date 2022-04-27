@@ -2,38 +2,38 @@
 
 // NEW LOCATION WRAPPER STYLES
 .new-location-wrapper {
-  margin: $default 0;
+  margin: 1rem 0;
   padding-left: 0;
   flex-direction: column;
   &::before,
   li {
-    margin-bottom: $sizeD;
+    margin-bottom: 0.3rem;
   }
 }
 // ADD LOG STYLES
 .add-log-wrapper {
-  width: $wdt;
-  height: calc($biggerA - $pxl2);
+  width: 50vw;
+  height: calc(100vh - 60px);
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: $padding;
+  padding: 2rem;
   z-index: 10;
   overflow-y: auto;
   background-color: $whitesmoke;
   .bottom-nav {
     cursor: pointer;
     text-align: center;
-    height: $pxl3;
-    width: $big_pixel;
+    height: 6px;
+    width: 100px;
     margin: -1rem auto 1rem auto;
     background-color: $custCol3;
   }
   .tab-view {
     position: absolute;
-    border-top-left-radius: $default;
-    border-top-right-radius: $default;
-    width: $height;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
     top: 95%;
     left: 0;
   }
@@ -43,15 +43,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: $sizeE;
+  margin-bottom: 1.5rem;
   h2 {
     margin: 0;
   }
   i {
     cursor: pointer;
-    padding: $size;
+    padding: 0.4rem;
     &:hover {
-      border-radius: $maxRad;
+      border-radius: 999px;
       background-color: $custCol4;
     }
   }

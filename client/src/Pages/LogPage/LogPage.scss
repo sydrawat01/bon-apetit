@@ -3,24 +3,24 @@
 // LOG PAGE CONTAINER STYLES
 .log-page-container {
   display: grid;
-  grid-template-columns: $portion $portion;
-  gap: $default;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   background-image: linear-gradient($custColor, $white);
 }
 // DETAIL SECTION STYLES
 .detail-section {
-  padding: $padding;
-  border-radius: $mini;
+  padding: 2rem;
+  border-radius: 0.5rem;
   box-shadow: $boxShadow;
-  margin-bottom: $padding;
-  min-height: $sizeB;
-  height: $height;
+  margin-bottom: 2rem;
+  min-height: 10rem;
+  height: 100%;
   background-color: $whitesmoke;
 }
 
 .flex-ic {
   display: flex;
-  column-gap: $mini;
+  column-gap: 0.5rem;
   opacity: 0.7;
   p {
     margin: 0;
@@ -34,23 +34,23 @@
 }
 // MAP  SECTION STYLES
 .map-section {
-  height: $height;
-  min-height: $pxl;
+  height: 100%;
+  min-height: 400px;
 }
 // MEDIA QUERIES
-@media screen and (max-width: $pxl1) {
+@media screen and (max-width: 600px) {
   .log-page-container {
-    grid-template-columns: $portion;
+    grid-template-columns: 1fr;
   }
 }
 // GROUP BUTTON STYLES
 .btn-group {
   display: flex;
-  gap: $small;
-  margin-top: $sizeC;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
   justify-content: flex-end !important;
   & .trash_btn {
     background-color: $custCol2;
-    width: $height;
+    width: 100%;
   }
 }
