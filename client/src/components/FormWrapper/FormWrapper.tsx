@@ -1,6 +1,8 @@
 import { FC, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
+import logo from '../../assets/images/ramen.png'
+
 import './FormWrapper.scss'
 
 type FormWrapperProps = {
@@ -8,14 +10,16 @@ type FormWrapperProps = {
   subTitle?: string
   children?: ReactNode
 }
-
+/**
+ * FORM WRAPPER
+ */
 const FormWrapper: FC<FormWrapperProps> = ({ title, subTitle, children }) => {
   return (
     <div className="form-wrapper">
       <Link className="logo" to="/">
         <h1>
-          <i className="fas fa-map-marked-alt"></i>
-          bon-<span className="bonappetit">app-e</span>tit.
+          <img src={logo} alt="ramen" />
+          Bon Appétit
         </h1>
       </Link>
       <h2>{title}</h2>

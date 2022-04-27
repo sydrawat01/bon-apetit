@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
 import { verifyToken } from '../utils/tokenHandler'
-
+/**
+ * AUTHENTICATION HANDLER
+ */
 const isAuth = (req: Request, res: Response, next: NextFunction) => {
   try {
     const authError = new Error('Not Authenticated')

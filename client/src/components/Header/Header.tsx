@@ -4,8 +4,12 @@ import { useQueryClient } from 'react-query'
 import { Link } from 'react-router-dom'
 import useMeQuery from '../../hooks/queries/useMeQuery'
 
-import './Header.scss'
+import logo from '../../assets/images/ramen.png'
 
+import './Header.scss'
+/**
+ * HEADER(NAVBAR)
+ */
 const Header: FC = () => {
   const queryClient = useQueryClient()
   const { data } = useMeQuery()
@@ -15,8 +19,8 @@ const Header: FC = () => {
       <div className="container">
         <Link className="logo" to="/">
           <h1>
-            <i className="fas fa-map-marked-alt"></i>
-            bon-<span className="bonappetit">app-e</span>tit.
+            <img src={logo} alt="ramen.png" />
+            Bon Appétit
           </h1>
         </Link>
         <nav>
@@ -53,8 +57,7 @@ const Header: FC = () => {
                     queryClient.invalidateQueries('me')
                   }}
                 >
-                  {/* fas fa-sign-out-alt */}
-                  <i className="white"></i>
+                  <i className="  fas fa-sign-out-alt logout"></i>
                   Logout
                 </button>
               </li>

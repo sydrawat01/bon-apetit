@@ -1,4 +1,4 @@
-# :ramen: Ramenrogu BackEnd with ExpressJS and MongoDB
+# :ramen: Ramenrogu BackEnd with NodeJS(ExpressJS) and MongoDB
 
 ## :star2: Features
 

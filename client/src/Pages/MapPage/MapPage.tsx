@@ -14,7 +14,9 @@ type Location = {
   longitude: number
   latitude: number
 }
-
+/**
+ * PAGE SCROLL
+ */
 const scrollToBottom = () => {
   window.scrollTo(0, document.body.scrollHeight)
 }

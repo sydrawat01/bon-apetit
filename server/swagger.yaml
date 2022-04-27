@@ -1,13 +1,25 @@
 openapi: "3.0.0"
 info:
   title: Ramenrogu
-  description: Ramenrogu BackEnd Documentation
-  version: 1.0.1
+  description: Ramenrogu Backend API Documentation
+  version: 1.1.3
+  contact:
+    email: patel.jeel@northeastern.edu
+    url: "https://github.com/jeeltpatel"
 servers:
-  - url: http://localhost:1337/api/getVisits
-    description: localhost version of our app
-  - url: http://localhost:1337/api/postVisit
-    description: this is a dummy api url,it doesn't work.
+  - url: "{protocol}://localhost:1337/api/{version}"
+    description: for local host
+    variables:
+      version:
+        enum:
+          - logs
+          - users
+        default: logs
+      protocol:
+        enum:
+          - http
+          - https
+        default: http
 components:
   securitySchemes:
     BasicAuth:
@@ -17,12 +29,14 @@ components:
       type: http
       scheme: bearer
 paths:
-  /:
+  /all:
     get:
-      summary: return title,comments,image,latitude,longitude,rating and visitedDate
+      tags:
+        - Array
+      summary: returns all  title,comments,image,latitude,longitude,rating, visitedDate
       description: Optional extended description in CommonMark or HTML.
       responses:
-        "200": # status code
+        200: # status code
           description: returns an object
           content:
             application/json:
@@ -38,25 +52,137 @@ paths:
                   latitude:
                     type: integer
                   longitude:
-                     type: integer
+                    type: integer
                   rating:
                     type: integer
                   visitedDate:
-                     type: string
-    post:
-      summary: return username,follows and followers
+                    type: string
+        400:
+          description: Bad request
+        500:
+          description: internal server error
+
+  /:
+    get:
+      tags:
+        - Array
+      summary: returns all users details
       description: Optional extended description in CommonMark or HTML.
       responses:
-        "200": # status code
+        200: # status code
           description: returns an object
           content:
             application/json:
               schema:
                 type: object
                 properties:
+                  _id:
+                    type: string
+                  fullName:
+                    type: string
                   username:
                     type: string
-                  followers:
+                  createdAt:
                     type: string
-                  follows:
+                  updatedAt:
                     type: string
+
+        400:
+          description: Bad request
+        500:
+          description: internal server error
+    post:
+        tags:
+          - Array
+        summary: adds a new review,users to existing reviews and users
+        description: Optional extended description in CommonMark or HTML.
+        responses:
+          200: # status code
+            description: returns an object
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    rating:
+                      type: integer
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    comments:
+                      type: string
+                    createdAt:
+                      type: string
+                    updatedAt:
+                      type: string
+                    latitude:
+                       type: integer
+                    longitude:
+                        type: integer
+
+          400:
+            description: Bad request
+          500:
+            description: internal server error
+    
+    put:
+        tags:
+          - Array
+        summary: update a review and users
+        description: Optional extended description in CommonMark or HTML.
+        responses:
+          200: # status code
+            description: returns an object
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    _id:
+                     type: integer
+                    rating:
+                      type: integer
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    comments:
+                      type: string
+                    createdAt:
+                      type: string
+                    updatedAt:
+                      type: string
+                    latitude:
+                       type: integer
+                    longitude:
+                        type: integer
+
+          400:
+            description: Bad request
+          500:
+            description: internal server error
+    delete:
+        tags:
+          - Array
+        summary: delete a reviews and users
+        description: Optional extended description in CommonMark or HTML.
+        responses:
+          200: # status code
+            description: returns an object
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    _id:
+                      type: integer
+                    user_id:
+                       type: integer
+                 
+
+          400:
+            description: Bad request
+          500:
+            description: internal server error
+

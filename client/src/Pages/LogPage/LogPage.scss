@@ -1,8 +1,11 @@
+// LOG PAGE CONTAINER STYLES
 .log-page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  background-image: linear-gradient(rgb(251, 239, 201), white);
 }
+// DETAIL SECTION STYLES
 .detail-section {
   padding: 2rem;
   border-radius: 0.5rem;
@@ -10,6 +13,7 @@
   margin-bottom: 2rem;
   min-height: 10rem;
   height: 100%;
+  background-color: whitesmoke;
 }
 
 .flex-ic {
@@ -21,22 +25,23 @@
   }
 }
 
+// LOG USER STYLES
 .log-user {
   font-weight: 600;
   color: #333;
 }
-
+// MAP  SECTION STYLES
 .map-section {
   height: 100%;
   min-height: 400px;
 }
-
+// MEDIA QUERIES
 @media screen and (max-width: 600px) {
   .log-page-container {
     grid-template-columns: 1fr;
   }
 }
-
+// GROUP BUTTON STYLES
 .btn-group {
   display: flex;
   gap: 0.8rem;

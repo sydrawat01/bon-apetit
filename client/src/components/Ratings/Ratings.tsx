@@ -1,13 +1,17 @@
 import { FC } from 'react'
 import cn from 'classnames'
 import './Ratings.scss'
-
+/**
+ * DEFINITIONS FOR RATING
+ */
 type RatingProps = {
   color?: 'green' | 'orange'
   rating: number
   max?: number
 }
-
+/**
+ * RATING
+ */
 const Rating: FC<RatingProps> = ({ color = 'green', rating }) => {
   return (
     <div className="rating" style={{ color }}>

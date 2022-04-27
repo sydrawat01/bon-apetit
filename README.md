@@ -1,4 +1,4 @@
-<h1 align="center"> :ramen: Ramenrogu </h1>
+<h1 align="center"> :ramen: Bon Appétit </h1>
 
 ## :page_facing_up: Project Description
 

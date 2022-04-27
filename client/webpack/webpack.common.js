@@ -4,6 +4,9 @@ const DashboardPlugin = require('webpack-dashboard/plugin')
 const Dotenv = require('dotenv-webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+/**
+ * WEBPACK CONFIGURATION
+ */
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {

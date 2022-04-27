@@ -1,7 +1,10 @@
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BuildAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
+/**
+ * WEBPACK CONFIGURATION FOR PRODUCTION 
+ */
 module.exports = {
   mode: 'production',
   devtool: 'source-map',

@@ -11,6 +11,9 @@ import InputField from '../../components/UI/InputField'
 
 import './Register.scss'
 
+/**
+ * REGISTRATION PAGE
+ */
 const Register: FC = () => {
   const navigate = useNavigate()
   const { mutateAsync } = useMutation(registerUser)

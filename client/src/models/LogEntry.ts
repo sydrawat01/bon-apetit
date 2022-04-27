@@ -1,5 +1,7 @@
 import { UserDoc } from './User'
-
+/**
+ * LOG-ENTRY MODEL FOR REVIEW
+ */
 export type LogEntry = {
   title: string
   description?: string

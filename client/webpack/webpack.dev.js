@@ -1,5 +1,8 @@
 const ReactRefreshWebapckPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
+/**
+ * WEBPACK CONFIGURATION FOR DEV ENVIRONMENT
+ */
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-source-map',
