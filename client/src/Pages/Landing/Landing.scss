@@ -1,63 +1,82 @@
-@import '../../styles/main.scss';
-
+// CONTAINER STYLES
 .container {
+  .logo {
+    padding: 10px 0 0 0;
+  }
   h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 15px 0;
     display: flex;
-    font-size: $bold;
+    justify-content: center;
+    align-items: center;
+    i {
+      color: #b09954;
+    }
   }
 }
-
+.public-logs-container {
+  color: black;
+  background-image: linear-gradient(rgb(251, 239, 201), white);
+}
+//LOG TILES STYLES
 .logs-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: $default;
+  gap: 1rem;
 }
-
+//LOG ARTICLES STYLES
 .log-article {
-  padding: $padding;
-  border-radius: $mini;
-  box-shadow: $boxShadow;
-  height: $height;
-  background-color: $mustard;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  height: 100%;
   a {
-    color: $customColor;
+    color: #111;
     width: max-content;
     h2 {
       margin-top: 0;
-      margin-bottom: $default;
+      margin-bottom: 1rem;
     }
   }
   blockquote {
     margin-left: 0;
     opacity: 0.8;
+    font-size: 1.2rem;
   }
   .flex-2 {
     display: flex;
     align-items: center;
+    span {
+      font-size: 1.3rem;
+    }
     i {
-      color: $grayColor;
-      height: $default;
-      width: $default;
-      margin-right: $size;
+      color: #555;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.4rem;
     }
   }
 }
 
 .no-log-wrapper {
-  height: $height;
+  height: 100%;
   a {
-    color: $blue;
+    color: blue;
     text-decoration: none;
   }
 }
-
-.brief {
-  display: flex;
-  color: $gray;
-}
-
+// MEDIA QUERIES
 @media screen and (max-width: 768px) {
   .public-logs-container {
-    grid-template-columns: $portion;
+    grid-template-columns: 1fr;
+  }
+  .container h1 {
+    font-size: 1.6rem;
+    img {
+      width: 35px;
+      height: 30px;
+    }
   }
 }
