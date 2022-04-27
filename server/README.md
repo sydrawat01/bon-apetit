@@ -1,21 +1,22 @@
-# :ramen: Ramenrogu BackEnd with NodeJS(ExpressJS) and MongoDB
+<h1 align="center"> :ramen: Bon Appétit BackEnd with NodeJS(ExpressJS) and MongoDB </h1>
 
 ## :star2: Features
 
 - [NodeJS](https://nodejs.org/en/) support
 - [MongoDB](https://www.mongodb.com/)
 - [ExpressJS](http://expressjs.com/)
-- [Swagger Documentation](https://swagger.io/) 
+- [Swagger Documentation](https://swagger.io/)
 - [Postman](https://www.postman.com/)
-
 
 ## :construction: Development
 
 To install dependencies, run the following command:
+
 ```shell
 #npm users
 npm install
 ```
+
 To run the development server, run the following command:
 
 ```shell
@@ -23,6 +24,7 @@ To run the development server, run the following command:
   #npm users
   npm run dev
 ```
+
 > This serves the app on `localhost:1337`.
 
 ## :rocket: Build

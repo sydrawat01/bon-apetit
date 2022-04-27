@@ -1,4 +1,4 @@
-# :ramen: Ramenrogu FrontEnd with ReactJS and TypeScript
+<h1 align="center"> :ramen: Bon Appétit FrontEnd with ReactJS and TypeScript </h1>
 
 ## :star2: Features
 
