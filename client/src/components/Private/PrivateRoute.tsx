@@ -4,6 +4,9 @@ import { Navigate } from 'react-router-dom'
 import Spinner from '../UI/Spinner'
 import { loadUser } from '../../services/users'
 
+/**
+ * DEFINITIONS FOR PRIVATE ROUTES
+ */
 type PrivateRouteType = {
   children?: ReactNode
 }

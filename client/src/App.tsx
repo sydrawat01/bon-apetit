@@ -18,7 +18,7 @@ const Register = lazy(() => import('./Pages/Register/Register'))
 
 import './styles/layout/layout.scss'
 import './styles/main.scss'
-
+// AXIOS API
 axios.defaults.baseURL = `${API_URL}/api`
 axios.defaults.headers.common = {
   'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ axios.defaults.headers.common = {
 }
 
 const queryClient = new QueryClient()
-
+// CUSTOM ROUTES
 const App: FC = () => {
   return (
     <Suspense fallback={<Spinner />}>

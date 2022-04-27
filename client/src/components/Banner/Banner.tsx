@@ -2,6 +2,9 @@ import { FC } from 'react'
 
 import './Banner.scss'
 
+/**
+ * BANNER
+ */
 const Banner: FC = () => {
   return (
     <div className="banner">

@@ -3,7 +3,9 @@ import { FC } from 'react'
 interface MarkerPinProps {
   markerSize: number
 }
-
+/**
+ * PIN MARKER IN MAP
+ */
 const MarkerPin: FC<MarkerPinProps> = ({ markerSize }) => {
   return (
     <svg

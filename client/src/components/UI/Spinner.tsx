@@ -3,7 +3,9 @@ import Lottie from 'lottie-react'
 import ramen from '../../assets/animations/ramen.json'
 
 import './Spinner.scss'
-
+/**
+ * SPINNER DEFINITION
+ */
 const Spinner: FC = () => {
   const style = {
     // margin: '0 auto',

@@ -10,7 +10,9 @@ type FormWrapperProps = {
   subTitle?: string
   children?: ReactNode
 }
-
+/**
+ * FORM WRAPPER
+ */
 const FormWrapper: FC<FormWrapperProps> = ({ title, subTitle, children }) => {
   return (
     <div className="form-wrapper">

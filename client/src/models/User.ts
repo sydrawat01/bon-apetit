@@ -1,5 +1,8 @@
 import { ResError } from './Error'
 
+/**
+ * USER MODEL SCHEMA
+ */
 export interface UserDoc {
   _id: string
   email: string

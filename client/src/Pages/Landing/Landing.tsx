@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import useFetchAllLogs from '../../hooks/queries/useFetchAllLogs'
 
 import './Landing.scss'
-
+// LANDING PAGE
 const Landing: FC = () => {
   const { data, isLoading } = useFetchAllLogs()
 

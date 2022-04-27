@@ -6,7 +6,9 @@ import Banner from '../Banner/Banner'
 type LayoutProps = {
   children?: ReactNode
 }
-
+/**
+ * LAYOUT
+ */
 const Layout: FC<LayoutProps> = ({ children }) => {
   const location = useLocation()
   return (

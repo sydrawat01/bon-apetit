@@ -2,7 +2,10 @@ import { FC } from 'react'
 import IMG1 from '../../assets/images/404Ramen.svg'
 import './PageNotFound.scss'
 import { Link } from 'react-router-dom'
-
+/**
+ *
+ * PAGE NOT FOUND
+ */
 const PageNotFound: FC = () => {
   return (
     <div className="error404">
