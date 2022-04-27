@@ -1,24 +1,26 @@
+@import '../../styles/main.scss';
+
 // LOG PAGE CONTAINER STYLES
 .log-page-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  background-image: linear-gradient(rgb(251, 239, 201), white);
+  grid-template-columns: $portion $portion;
+  gap: $default;
+  background-image: linear-gradient($custColor, $white);
 }
 // DETAIL SECTION STYLES
 .detail-section {
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
-  min-height: 10rem;
-  height: 100%;
-  background-color: whitesmoke;
+  padding: $padding;
+  border-radius: $mini;
+  box-shadow: $boxShadow;
+  margin-bottom: $padding;
+  min-height: $sizeB;
+  height: $height;
+  background-color: $whitesmoke;
 }
 
 .flex-ic {
   display: flex;
-  column-gap: 0.5rem;
+  column-gap: $mini;
   opacity: 0.7;
   p {
     margin: 0;
@@ -27,28 +29,28 @@
 
 // LOG USER STYLES
 .log-user {
-  font-weight: 600;
-  color: #333;
+  font-weight: $reg;
+  color: $cusCol;
 }
 // MAP  SECTION STYLES
 .map-section {
-  height: 100%;
-  min-height: 400px;
+  height: $height;
+  min-height: $pxl;
 }
 // MEDIA QUERIES
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $pxl1) {
   .log-page-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: $portion;
   }
 }
 // GROUP BUTTON STYLES
 .btn-group {
   display: flex;
-  gap: 0.8rem;
-  margin-top: 0.9rem;
+  gap: $small;
+  margin-top: $sizeC;
   justify-content: flex-end !important;
   & .trash_btn {
-    background-color: rgb(158, 2, 2);
-    width: 100%;
+    background-color: $custCol2;
+    width: $height;
   }
 }

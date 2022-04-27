@@ -1,37 +1,39 @@
+@import '../../styles/main.scss';
+
 // NEW LOCATION WRAPPER STYLES
 .new-location-wrapper {
-  margin: 1rem 0;
+  margin: $default 0;
   padding-left: 0;
   flex-direction: column;
   &::before,
   li {
-    margin-bottom: 0.3rem;
+    margin-bottom: $sizeD;
   }
 }
 // ADD LOG STYLES
 .add-log-wrapper {
-  width: 50vw;
-  height: calc(100vh - 60px);
+  width: $wdt;
+  height: calc($biggerA - $pxl2);
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 2rem;
+  padding: $padding;
   z-index: 10;
   overflow-y: auto;
-  background-color: whitesmoke;
+  background-color: $whitesmoke;
   .bottom-nav {
     cursor: pointer;
     text-align: center;
-    height: 6px;
-    width: 100px;
+    height: $pxl3;
+    width: $big_pixel;
     margin: -1rem auto 1rem auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: $custCol3;
   }
   .tab-view {
     position: absolute;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
+    border-top-left-radius: $default;
+    border-top-right-radius: $default;
+    width: $height;
     top: 95%;
     left: 0;
   }
@@ -41,16 +43,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: $sizeE;
   h2 {
     margin: 0;
   }
   i {
     cursor: pointer;
-    padding: 0.4rem;
+    padding: $size;
     &:hover {
-      border-radius: 999px;
-      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: $maxRad;
+      background-color: $custCol4;
     }
   }
 }

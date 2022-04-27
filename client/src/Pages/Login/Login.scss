@@ -1,17 +1,19 @@
+@import '../../styles/main.scss';
+
 // ERROR STYLES
 .topError {
-  background-color: #f5a0a0;
-  color: #f00;
+  background-color: $defaultColor;
+  color: $red;
   font-weight: bold;
-  padding: 1rem;
+  padding: $default;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.7rem;
+  margin-bottom: $sizeA;
   button {
     padding: 0;
     background: none;
-    color: #f00;
+    color: $red;
     &:active {
       box-shadow: none;
     }
@@ -21,8 +23,8 @@
 .btn-group {
   display: flex;
   justify-content: center;
-  column-gap: 0.4rem;
+  column-gap: $size;
   button {
-    width: 100%;
+    width: $height;
   }
 }
