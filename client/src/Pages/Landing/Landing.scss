@@ -1,7 +1,19 @@
 .container {
+  .logo {
+    padding: 10px 0 0 0;
+  }
   h1 {
     text-align: center;
+    font-size: 4rem;
+    margin: 0 0 15px 0;
+    i {
+      color: #b09954;
+    }
   }
+}
+.public-logs-container {
+  color: black;
+  background-image: linear-gradient(rgb(251, 239, 201), white);
 }
 
 .logs-list {
@@ -13,6 +25,7 @@
 .log-article {
   padding: 2rem;
   border-radius: 0.5rem;
+  background-color: whitesmoke;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
   height: 100%;
   a {
@@ -26,10 +39,14 @@
   blockquote {
     margin-left: 0;
     opacity: 0.8;
+    font-size: 1.2rem;
   }
   .flex-2 {
     display: flex;
     align-items: center;
+    span {
+      font-size: 1.3rem;
+    }
     i {
       color: #555;
       height: 1rem;
@@ -50,5 +67,8 @@
 @media screen and (max-width: 768px) {
   .public-logs-container {
     grid-template-columns: 1fr;
+  }
+  .container h1 {
+    font-size: 2rem;
   }
 }

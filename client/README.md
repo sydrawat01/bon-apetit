@@ -1,4 +1,4 @@
-# :ramen: Ramenrogu frontend with react and TypeScript
+# :ramen: Ramenrogu frontend with React and TypeScript
 
 ## :star2: Features
 

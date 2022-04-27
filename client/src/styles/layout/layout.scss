@@ -23,7 +23,7 @@ ul {
 }
 
 a {
-  color: #fff;
+  color: #000;
 }
 
 label {
@@ -75,9 +75,9 @@ button:disabled {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 4rem 3.5rem;
 }
 
 .marker-svg {
