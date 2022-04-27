@@ -24,6 +24,10 @@ ul {
 
 a {
   color: #000;
+  text-decoration: none;
+  &:hover {
+    color: rgba(62, 62, 62, 0.456);
+  }
 }
 
 label {

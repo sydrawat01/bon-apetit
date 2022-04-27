@@ -6,6 +6,9 @@
     text-align: center;
     font-size: 4rem;
     margin: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     i {
       color: #b09954;
     }
@@ -69,6 +72,10 @@
     grid-template-columns: 1fr;
   }
   .container h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    img {
+      width: 35px;
+      height: 30px;
+    }
   }
 }

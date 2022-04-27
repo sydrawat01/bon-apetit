@@ -1,9 +1,9 @@
-# :ramen: Ramenrogu frontend with React and TypeScript
+# :ramen: Ramenrogu FrontEnd with ReactJS and TypeScript
 
 ## :star2: Features
 
-- [TypeScript](https://www.typescriptlang.org/) support
-- CSS Modules and SASS support
+- [TypeScript](https://www.typescriptlang.org/)
+- Webpack for production-ready code.
 - [React Refresh for Webpack](https://github.com/pmmmwh/react-refresh-webpack-plugin)
 - [Dotenv for Webpack](https://github.com/mrsteele/dotenv-webpack)
 - [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
