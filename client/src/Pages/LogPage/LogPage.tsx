@@ -97,7 +97,7 @@ const Landing: FC = () => {
         >
           <Marker {...location}>
             <div>
-              <MarkerPin markerSize={5} />
+              <MarkerPin markerSize={13} />
             </div>
           </Marker>
         </MapWrapper>
